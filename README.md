@@ -2,6 +2,9 @@ LSTMs for ordinal regression
 
 Submission for European Conference in Machine Learning 2017
 
+REQUISITES: Keras framework running on Python 2.7
+
+
 Run instructions>
 1. Unzip dataset folder
 
@@ -13,6 +16,7 @@ python ore.py "exp_code" "data_id" False "mode"
 "train" mode: python ore.py "exp_code" "data_id" False "train" n_predictions
 Trains a model of type exp_code for model data_id. Weights are stored separately.
 
+3. Test the models
 "test" mode: python ore.py "exp_code" "data_id" test "mode" n_predictions
 REQUIRES: test_files.txt. See example
 Loads the trained model given in each line in test_files and runs a forecast with n_predictions and no uncertainty propagation.
@@ -21,4 +25,4 @@ Loads the trained model given in each line in test_files and runs a forecast wit
 Loads the trained model given in each line in test_files and runs a forecast with n_predictions and uncertainty propagation. Plots attrators and plots with uncertainty bars after using propagationg with uncertainty.
 
 "att_mse" mode: python ore.py "exp_code" "data_id" test "att_mse" n_predictions
-REQUIRES: attractors. pkl
+REQUIRES: attractors. pkl , obtained after executing the "extra" mode.

@@ -1,0 +1,1 @@
+ORE08_1,MG,200,1e-7,./best_weights/ORE08_1_MG_h1200_l1e-07.h5,500

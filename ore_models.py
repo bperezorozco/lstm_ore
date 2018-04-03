@@ -106,8 +106,8 @@ def create_oneL_model( hidden_units, l, timesteps, n_bins ):
 def create_shallow_model( hidden_units, l, timesteps, n_bins ):
     model = Sequential()
     model.add(Flatten(input_shape=(timesteps,n_bins)))
-    model.add( Dense(hidden_units, W_regularizer=l2(l)) )
-    model.add( Dense(n_bins, W_regularizer=l2(l)) )
+    model.add( Dense(hidden_units, W_regularizer=l2(l), activation='sigmoid') )
+    model.add( Dense(n_bins, W_regularizer=l2(l), activation='softmax') )
     model.compile( optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'] )
     
     #print "Shallow model created successfully."
